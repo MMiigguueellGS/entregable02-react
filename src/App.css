@@ -1,0 +1,88 @@
+/* DIV 1 */
+@keyframes changeBgColor1 {
+  0% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.animate-bg-change1 {
+  animation: changeBgColor1 1s linear infinite;
+}
+
+/* DIV 2 */
+@keyframes changeBgColor2 {
+  16.6% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.animate-bg-change2 {
+  animation: changeBgColor2 1s linear infinite;
+}
+
+/* DIV 3 */
+@keyframes changeBgColor3 {
+  33.2% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.animate-bg-change3 {
+  animation: changeBgColor3 1s linear infinite;
+}
+
+/* DIV 4 */
+@keyframes changeBgColor4 {
+  49.8% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.animate-bg-change4 {
+  animation: changeBgColor4 1s linear infinite;
+}
+
+/* DIV 5 */
+@keyframes changeBgColor5 {
+  66.6% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+
+.animate-bg-change5 {
+  animation: changeBgColor5 1s linear infinite;
+}
+
+/* DIV 6 */
+@keyframes changeBgColor6 {
+  83% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: white;
+  }
+}
+.animate-bg-change6 {
+  animation: changeBgColor6 1s linear infinite;
+}
