@@ -29,7 +29,7 @@ const Maps = ({ lat, lon, city }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[latitude, longitude]} >
+        <Marker position={[latitude, longitude]}>
           <Popup>{`You are in the city of ${city}`}</Popup>
         </Marker>
       </MapContainer>

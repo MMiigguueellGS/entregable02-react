@@ -39,7 +39,7 @@ function App() {
       .get(url)
       .then(({ data }) => {
         setWeatherInfo(data);
-        //setIsLoading(false);
+        setIsLoading(false);
       })
       .catch((err) => console.log(err));
   };
@@ -60,16 +60,16 @@ function App() {
     navigator.geolocation.getCurrentPosition(success);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setIsLoading(false);
-      return window.removeEventListener("load", () => {});
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("load", () => {
+  //     setIsLoading(false);
+  //     return window.removeEventListener("load", () => {});
+  //   });
+  // }, []);
 
   return (
     <main
-      className={`  bg-cover bg-center min-h-screen lightgra grid flex-col items-center justify-center px-4 
+      className={`  bg-cover bg-center min-h-screen grid flex-col items-center justify-center px-4 
       ${backgroundWeather[weatherInfo?.weather[0].icon]}`}
     >
       {isLoading && <Loader />}

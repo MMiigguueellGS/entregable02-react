@@ -2,9 +2,8 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <section className="z-[100] fixed  h-screen w-screen bg-black/95 flex justify-center items-center ">
+    <section className="z-[1000] fixed  left-0 h-screen w-screen  bg-black/95 flex justify-center items-center ">
       <section className="grid gap-4">
-       
         {/* imagen de la nuve */}
         <div className="flex justify-center">
           <div>
@@ -13,7 +12,9 @@ const Loader = () => {
         </div>
 
         {/* texto del loader */}
-        <h2 className="text-white text-center efect__loader font-lato">Weather app</h2>
+        <h2 className="text-white text-center efect__loader font-lato">
+          Weather app
+        </h2>
 
         {/* Iconos de los climas */}
         <div className="grid  grid-cols-6 rounded-2xl  bg-white justify-around items-center w-[260px] ">
@@ -42,7 +43,3 @@ const Loader = () => {
 };
 
 export default Loader;
-
-
-
-
