@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Weather from "./components/Weather";
 import Loader from "./components/Loader";
+import Maps from "./components/Maps";
 
 function App() {
   const [weatherInfo, setWeatherInfo] = useState(null);
@@ -38,7 +39,7 @@ function App() {
       .get(url)
       .then(({ data }) => {
         setWeatherInfo(data);
-        setIsLoading(false);
+        //setIsLoading(false);
       })
       .catch((err) => console.log(err));
   };
@@ -59,11 +60,12 @@ function App() {
     navigator.geolocation.getCurrentPosition(success);
   }, []);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 5000);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      setIsLoading(false);
+      return window.removeEventListener("load", () => {});
+    });
+  }, []);
 
   return (
     <main
@@ -71,6 +73,7 @@ function App() {
       ${backgroundWeather[weatherInfo?.weather[0].icon]}`}
     >
       {isLoading && <Loader />}
+
       <form
         onSubmit={handleSusbmitCountry}
         className="flex rounded-md overflow-hidden max-w-max mx-auto"
@@ -83,7 +86,12 @@ function App() {
         />
         <button className="bg-yellow-500 px-4">Search</button>
       </form>
+
       <Weather weatherInfo={weatherInfo} />
+
+      {weatherInfo && (
+        <Maps lat={weatherInfo?.coord.lat} lon={weatherInfo?.coord.lon} />
+      )}
     </main>
   );
 }
