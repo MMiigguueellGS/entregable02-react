@@ -9,7 +9,6 @@ function App() {
   // Estados
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [pais, setPais] = useState(null)
 
   // objeto con las rutas de los fondos dependientes del clima
   const backgroundWeather = {
@@ -53,21 +52,14 @@ function App() {
     const country = e.target.idCountry.value;
     const APY_KEY = "c54aa9f645fa1212c106954d1048b71c";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${APY_KEY}`;
-    const url1 = `http://api.openweathermap.org/geo/1.0/direct?q=${country}&appid=${APY_KEY}`;
     axios
       .get(url)
-      .then(({ data }) => console.log(data))
+      .then(({ data }) => setWeatherInfo(data))
       .catch((err) => console.log(err));
-   
 
-    axios
-      .get(url1)
-      .then(({ data }) => console.log(data))
-      .catch((err) => console.log(err));
-     e.target.reset();
-
+    e.target.reset();
   };
-  
+
   // Efecto para manejar la geolicalizacion del usuario
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success);
