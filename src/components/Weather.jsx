@@ -19,7 +19,7 @@ const Weather = ({ weatherInfo }) => {
   return (
     <section className="grid place-items-center gap-8">
       <h2 className="text-[#000000] font-semibold text-2xl">
-        {weatherInfo?.name}, {weatherInfo?.sys.country }
+        {weatherInfo?.name}, {weatherInfo?.sys.country}
       </h2>
       <section className="grid gap-4 sm:grid-cols-[auto_auto]">
         {/* seccion superio */}
@@ -33,7 +33,7 @@ const Weather = ({ weatherInfo }) => {
           <div className="flex justify-center">
             <img
               src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@2x.png`}
-              alt="" 
+              alt=""
             />
           </div>
         </section>
