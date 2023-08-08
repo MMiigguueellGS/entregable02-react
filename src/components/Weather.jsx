@@ -18,7 +18,7 @@ const Weather = ({ weatherInfo }) => {
     : kelvinToFahrenheit(weatherInfo?.main.temp);
   return (
     <section className="grid place-items-center gap-8">
-      <h2 className="text-[#000000] font-semibold text-2xl">
+      <h2 className="text-[#403d3d] font-semibold text-2xl">
         {weatherInfo?.name}, {weatherInfo?.sys.country}
       </h2>
       <section className="grid gap-4 sm:grid-cols-[auto_auto]">
@@ -68,7 +68,7 @@ const Weather = ({ weatherInfo }) => {
         onClick={handleChangeUnitTemp}
         className="bg-white/60 mt-4 bg-white rounded-2xl flex items-center justify-center mx-auto px-4 text-blue-700 font-bold"
       >
-        Change to °{isCelsius ? "F" : "C"}
+        Change  °{isCelsius ? "F" : "C"}
       </button>
     </section>
   );
