@@ -5,8 +5,8 @@ import "leaflet/dist/leaflet.css";
 import "../styles/maps.css";
 
 const Maps = ({ lat, lon }) => {
-  const latitude = lat !== undefined && lat;
-  const longitude = lon !== undefined && lon;
+  const latitude = lat && lat;
+  const longitude = lon  && lon;
 
   return (
     <>
