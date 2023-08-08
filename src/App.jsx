@@ -69,7 +69,7 @@ function App() {
 
   return (
     <main
-      className={`  bg-cover bg-center min-h-screen lightgra flex flex-col justify-evenly items-center px-4 
+      className={`  bg-cover bg-center min-h-screen lightgra grid flex-col items-center justify-center px-4 
       ${backgroundWeather[weatherInfo?.weather[0].icon]}`}
     >
       {isLoading && <Loader />}

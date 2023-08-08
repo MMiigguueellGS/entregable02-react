@@ -2,19 +2,20 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import "../styles/maps.css";
+//import "../styles/maps.css";
 
 const Maps = ({ lat, lon }) => {
   const latitude = lat && lat;
   const longitude = lon  && lon;
+ 
 
   return (
     <>
       <MapContainer
         center={[latitude, longitude]}
-        zoom={2}
+        zoom={-12}
         scrollWheelZoom={false}
-        className="map"
+        className="min-h-[160px] min-w-[300px] max-h-[250px] max-w-[600px] rounded-2xl"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
