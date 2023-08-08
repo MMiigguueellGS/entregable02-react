@@ -4,8 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
-import icon from "leaflet/dist/images/Marker-icon.png";
-import iconShadow from "leaflet/dist/images/Marker-shadow.png";
+import icon from "/images/leaflet/marker-icon.png";
+import iconShadow from "/images/leaflet/Marker-shadow.png";
 
 const iconUbication = new L.icon({
   iconUrl: icon,
