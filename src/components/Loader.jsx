@@ -24,16 +24,16 @@ const Loader = () => {
             <img src="/loader/img2.png" alt="" />
           </div>
           <div className="bg-white animate-bg-change3">
-            <img src="/loader/img2.png" alt="" />
+            <img src="/loader/img3.png" alt="" />
           </div>
           <div className="bg-white animate-bg-change4">
-            <img src="/loader/img2.png" alt="" />
+            <img src="/loader/img4.png" alt="" />
           </div>
           <div className="bg-white animate-bg-change5">
-            <img src="/loader/img2.png" alt="" />
+            <img src="/loader/img5.png" alt="" />
           </div>
           <div className="bg-white animate-bg-change6 rounded-tr-lg rounded-tl-lg">
-            <img src="/loader/img2.png" alt="" />
+            <img src="/loader/img6.png" alt="" />
           </div>
         </div>
       </section>
