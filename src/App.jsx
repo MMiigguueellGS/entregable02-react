@@ -10,15 +10,15 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const backgroundWeather = {
-    "01n": "bg-[url('/background/bg01-cieloDespejado.jpg')]",
-    "02n": "bg-[url('/background/bg03-pocasNubes.jpg')]",
-    "09n": "bg-[url('/background/bg02-lluvia.jpg')]",
-    "04n": "bg-[url('/background/bg04-ventoso.jpg')]",
-    "11n": "bg-[url('/background/bg05-formentaElectrica.jpg')]",
-    "13n": "bg-[url('/background/bg06-nieve.jpg')]",
-    "03n": "bg-[url('/background/bg09-probablementeNubaldo.jpg')]",
-    "10n": "bg-[url('/background/bg08-aguacero.jpg')]",
-    "50n": "bg-[url('/background/bg07-mayormenteNublado.jpg')]",
+    "01n": "bg-[url('/background/bg01-cieloDespejado-noche.jpg')]",
+    "02n": "bg-[url('/background/bg03-pocasNubes-noche.jpg')]",
+    "09n": "bg-[url('/background/bg02-lluvia-noche.jpg')]",
+    "04n": "bg-[url('/background/bg04-ventoso-noche.gif')]",
+    "11n": "bg-[url('/background/bg05-formentaElectrica-noche.jpg')]",
+    "13n": "bg-[url('/background/bg06-nieve-noche.jpg')]",
+    "03n": "bg-[url('/background/bg09-probablementeNubaldo-noche.jpg')]",
+    "10n": "bg-[url('/background/bg08-aguacero-noche.jpg')]",
+    "50n": "bg-[url('/background/bg07-mayormenteNublado-noche.jpg')]",
     "01d": "bg-[url('/background/bg01-cieloDespejado.jpg')]",
     "09d": "bg-[url('/background/bg02-lluvia.jpg')]",
     "02d": "bg-[url('/background/bg03-pocasNubes.jpg')]",
@@ -81,10 +81,10 @@ function App() {
         <input
           id="idCountry"
           placeholder="Type your city..."
-          className="text-black p-2 text-center"
+          className="text-black p-2 text-center font-lato"
           type="text"
         />
-        <button className="bg-yellow-500 px-4">Search</button>
+        <button className="bg-yellow-500 px-4 font-lato">Search</button>
       </form>
 
       <Weather weatherInfo={weatherInfo} />

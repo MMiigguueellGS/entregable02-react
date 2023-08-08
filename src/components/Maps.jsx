@@ -22,7 +22,7 @@ const Maps = ({ lat, lon, city }) => {
         center={[latitude, longitude]}
         zoom={-12}
         scrollWheelZoom={false}
-        className="min-h-[160px] min-w-[300px]  rounded-2xl"
+        className="min-h-[160px] min-w-[300px]  rounded-2xl "
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
