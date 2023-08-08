@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Weather = ({ weatherInfo }) => {
   const [isCelsius, setIsCelsius] = useState(true);
-  console.log(weatherInfo);
+
   const kelvinToCelsius = (tempKelvin) => {
     return (tempKelvin - 273.15).toFixed(0);
   };
@@ -31,10 +31,12 @@ const Weather = ({ weatherInfo }) => {
             {resultConvertion}°{isCelsius ? "C" : "F"}
           </span>
           <div className="flex justify-center">
-            <img
-              src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@2x.png`}
-              alt=""
-            />
+            {weatherInfo && (
+              <img
+                src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@2x.png`}
+                alt=""
+              />
+            )}
           </div>
         </section>
 
