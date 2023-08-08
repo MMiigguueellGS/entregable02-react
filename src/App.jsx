@@ -80,7 +80,7 @@ function App() {
       >
         <input
           id="idCountry"
-          placeholder="Type your country..."
+          placeholder="Type your city..."
           className="text-black p-2 text-center"
           type="text"
         />
