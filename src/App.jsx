@@ -6,9 +6,12 @@ import Loader from "./components/Loader";
 import Maps from "./components/Maps";
 
 function App() {
+  // Estados
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [pais, setPais] = useState(null)
 
+  // objeto con las rutas de los fondos dependientes del clima
   const backgroundWeather = {
     "01n": "bg-[url('/background/bg01-cieloDespejado-noche.jpg')]",
     "02n": "bg-[url('/background/bg03-pocasNubes-noche.jpg')]",
@@ -30,6 +33,7 @@ function App() {
     "50d": "bg-[url('/background/bg07-mayormenteNublado.jpg')]",
   };
 
+  //Funciones para manejar los endPoints
   const success = (pos) => {
     const lat = pos.coords.latitude;
     const lon = pos.coords.longitude;
@@ -49,13 +53,22 @@ function App() {
     const country = e.target.idCountry.value;
     const APY_KEY = "c54aa9f645fa1212c106954d1048b71c";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${APY_KEY}`;
+    const url1 = `http://api.openweathermap.org/geo/1.0/direct?q=${country}&appid=${APY_KEY}`;
     axios
       .get(url)
-      .then(({ data }) => setWeatherInfo(data))
+      .then(({ data }) => console.log(data))
       .catch((err) => console.log(err));
-    e.target.reset();
-  };
+   
 
+    axios
+      .get(url1)
+      .then(({ data }) => console.log(data))
+      .catch((err) => console.log(err));
+     e.target.reset();
+
+  };
+  
+  // Efecto para manejar la geolicalizacion del usuario
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success);
   }, []);
@@ -73,7 +86,6 @@ function App() {
       ${backgroundWeather[weatherInfo?.weather[0].icon]}`}
     >
       {isLoading && <Loader />}
-
       <form
         onSubmit={handleSusbmitCountry}
         className="flex rounded-md overflow-hidden max-w-max mx-auto"

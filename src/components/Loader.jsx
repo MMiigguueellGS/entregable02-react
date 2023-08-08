@@ -2,8 +2,9 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <section className="z-[1000] fixed  left-0 h-screen w-screen  bg-black/95 flex justify-center items-center ">
+    <section className="z-[100] fixed  left-0 h-screen w-screen  bg-black/95 flex justify-center items-center ">
       <section className="grid gap-4">
+        
         {/* imagen de la nuve */}
         <div className="flex justify-center">
           <div>

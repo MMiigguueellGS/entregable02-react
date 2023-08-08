@@ -1,18 +1,14 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
 import "leaflet/dist/leaflet.css";
-
 import L from "leaflet";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-icon.png";
 
 const iconUbication = new L.icon({
   iconUrl: icon,
-  iconShadowUrl: iconShadow
+  iconShadowUrl: iconShadow,
 });
-
-
 
 const Maps = ({ lat, lon, city }) => {
   const latitude = lat && lat;
