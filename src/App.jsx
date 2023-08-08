@@ -90,7 +90,7 @@ function App() {
       <Weather weatherInfo={weatherInfo} />
 
       {weatherInfo && (
-        <Maps lat={weatherInfo?.coord.lat} lon={weatherInfo?.coord.lon} />
+        <Maps lat={weatherInfo?.coord.lat} lon={weatherInfo?.coord.lon} city={weatherInfo?.name} />
       )}
     </main>
   );
