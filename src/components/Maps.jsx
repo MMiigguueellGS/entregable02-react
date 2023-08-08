@@ -9,10 +9,10 @@ import iconShadow from "leaflet/dist/images/Marker-icon.png"
 
 const iconUbication = new L.icon({
   iconUrl:icon,
-  iconShadow: iconShadow
+  iconShadowUrl: iconShadow
 })
 
-const Maps = ({ lat, lon }) => {
+const Maps = ({ lat, lon,city }) => {
   const latitude = lat && lat;
   const longitude = lon && lon;
 
@@ -30,7 +30,7 @@ const Maps = ({ lat, lon }) => {
         />
         <Marker position={[latitude, longitude]} icon={iconUbication}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+           {`estas en la ciudad ${city}}` }
           </Popup>
         </Marker>
       </MapContainer>
